@@ -1,24 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from "react"; 
+
+import Menu from './Components/Menu';
+import ProductList from './Components/ProductList';
+import Main from './Components/Main';
+import BasketContainer from './Components/BasketContainer';
+import Basket from './Components/Basket';
+import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FavouriteContainer from './Components/FavouriteContainer';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <>
+   <BrowserRouter>
+
+   
+<Routes>
+  <Route exact path="/" element={<Main />} />
+  <Route exact path="/Product" element={<ProductList />} />
+  <Route exact path="/Menu" element={<Menu />} />
+  <Route exact path="/Favorite" element={<FavouriteContainer />} />
+
+
+
+
+
+
+  {/* <Route exact path="/Nav" element={<Nav />}/> */}
+</Routes>
+</BrowserRouter>
+<div>
+  
     </div>
+
+
+
+</>
+
   );
 }
 
