@@ -34,7 +34,7 @@ dose of health
    font-semibold p-2'>Explore Menu</Link>
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}
     </div>
-    <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-up"
+    <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-left"
     data-aos-offset="200"
     data-aos-delay="50"
     data-aos-duration="1000"
