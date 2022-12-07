@@ -5,8 +5,10 @@ import { Outlet, Link } from "react-router-dom";
 import Catagories from './Catagories';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Footer from './Footer';
+import Contactmodal from './Contactmodal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Newsletter from './Newsletter';
 AOS.init();
 
 function Main() {
@@ -18,12 +20,8 @@ function Main() {
     <div className='flex flex-col md:flex-row justify-around md:p-12 shadow'>
       
     <div className='flex flex-col gap-12 md:m-5 md:p-12 p-9' data-aos="fade-right"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
+      data-aos-duration="2000"
+    
 >
       <p className='md:text-[50px] text-4xl w-64 font-light font-serif text-slate-600  text-center tracking-wider leading-snug'>
       For your daily
@@ -35,13 +33,10 @@ dose of health
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}
     </div>
     <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-left"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center">
+        data-aos-duration="2000"
+  
+   
+  >
       <img src="juice.png" alt="juiceimage" className='  '/>
     </div>
     {/* scale-100 absolute top-[100px]    md:right-[200px] */}
@@ -95,17 +90,26 @@ dose of health
       
     </div>
   
-
-    <article className='grid md:grid-cols-2 justify-items-center   md:gap-12'>
-      <section className='md:p-12  '>
+ <div className='md:h-96'>
+ <Newsletter />
+ </div>
+       
+ 
+    <article className='g md:ml-12 grid md:grid-cols-2 gap-4 content-center   '>
+      <section className='md:p-12 justify-self-end  '>
         <p className='text-xl font-semibold text-center'>VISIT US</p>
         <p className='text-xl font-normal m-5'>Address</p>
-        <p className='text-xl   w-30 m-5'>Nørrebrogade 227, 2200 
+        <p className='text-xl   w-20 m-5'>Nørrebrogade 227, 2200 
 København, Denmark</p>
-<button type="" className='bg-yellow-100 p-2 m-4 rounded shadow'>Contact us</button>
+<button type="" className=' border-gray-400 underline  bg-yellow-100 p-2 m-4 rounded shadow'>
+
+              <Contactmodal  />             
+</button>
       </section>
+     
       <section className='md:p-12  '>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" className='md:max-w-7xl md:h-fit'  ></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" 
+      className='md:w-1/2 md:h-full'  ></iframe>
       </section>
     </article>
     <Footer />

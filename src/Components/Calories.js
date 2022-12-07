@@ -27,7 +27,8 @@ function Calories() {
     <td>30</td> 
     <td>21</td>
     <td>370</td>
-  </tr><tr className='text-center'>
+  </tr>
+  <tr className='text-center'>
     <td>Avocado Sandwich</td>
     <td>24</td>
     <td>30</td> 
