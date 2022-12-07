@@ -20,9 +20,11 @@ export default function Product (props){
     
         return (
             <>
-      
-        <article className=" rounded-xl    shadow-2xl m-4"> 
-       <section className=" grid grid-cols-1 m-2">
+      <div >
+   
+  
+        <article className=" rounded-xl  max-w-3xl  shadow-2xl m-4"> 
+       <section className=" grid grid-cols-2 m-2">
         <div className=''>
           
        
@@ -43,7 +45,18 @@ export default function Product (props){
             </div>
             <p className="md:font-medium leading-6 tracking-wider   rounded-y-xl md:w-46 m-4">{props.product.Discription}</p>
            
-           
+            <span className="  md:m-2">
+            <button onClick={buy} className="rounded-md p-2 font-sans transition ease-in-out 
+            delay-150 bg-yellow-100 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300 text-black ">
+           <div className='flex '>
+           <ShoppingCartIcon   sx={{ fontSize: 20, margin:"2px" }} />
+           <p className='text-sm'>    Add to Order
+</p>
+           </div>
+   
+            </button>
+         
+            </span>
             </div>
             <div className='flex justify-between'>
                 
@@ -57,21 +70,11 @@ export default function Product (props){
 >
   <BottomNavigationAction label="Favorites" icon={<FavoriteIcon onClick={fav}/>} />
 </BottomNavigation> */}
-            <span className="  md:m-2">
-            <button onClick={buy} className="rounded-md p-2 font-sans transition ease-in-out 
-            delay-150 bg-yellow-200 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300 text-black ">
-           <div className='flex '>
-           <ShoppingCartIcon   sx={{ fontSize: 20, margin:"2px" }} />
-           <p className='text-sm'>    Add to Order
-</p>
-           </div>
-   
-            </button>
-         
-            </span>
+      
             </div>
             </section>
         </article>
+        </div>
         </>
      
         )

@@ -9,6 +9,7 @@ import BasketContainer from './Components/BasketContainer';
 import Basket from './Components/Basket';
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FavouriteContainer from './Components/FavouriteContainer';
+import Calories from './Components/Calories';
 
 function App() {
   
@@ -21,6 +22,8 @@ function App() {
   <Route exact path="/" element={<Main />} />
   <Route exact path="/Product" element={<ProductList />} />
   <Route exact path="/Menu" element={<Menu />} />
+  <Route exact path="/Calories" element={<Calories />} />
+
   <Route exact path="/Favorite" element={<FavouriteContainer />} />
 
 

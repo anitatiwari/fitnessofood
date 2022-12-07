@@ -29,3 +29,9 @@ code {
   align-items: center;
   cursor: pointer;
 }
+th, td {
+  padding: 15px;
+}
+tr:nth-of-type(even) {
+  background-color:rgba(229, 228, 227, 0.748);
+}

@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 
 import { useState, useEffect } from 'react';
 
-function Modal() {
+function Contactmodal() {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
@@ -76,5 +76,5 @@ function Modal() {
   
 }
 
-export default Modal
+export default Contactmodal
 //  onClick={() => setShowModal(false)}

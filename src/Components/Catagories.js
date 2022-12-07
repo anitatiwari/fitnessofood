@@ -3,8 +3,9 @@ import React from 'react'
 function Catagories() {
   return (
     <>
-    <div className='md:text-2xl md:m-12 '>Shop</div>
-    <div className='flex justify-center md:gap-12 gap-5	'>
+    <div className='md:text-3xl md:m-12  text-green-800 text-center traking-wide '>
+       <p className='tracking-wider underline '>Our Veriety</p> </div>
+    <div className='flex justify-evenly gap-5	'>
         
     
     <div>

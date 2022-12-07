@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react"; // import state
+import Contactmodal from './Contactmodal';
 
 function Nav() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
@@ -45,22 +46,25 @@ function Nav() {
               <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
               <Link to="/"> Home</Link>                </li>
               <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
-              <Link to="/Menu"> Menu</Link>         
+              <Link to="/Menu?Catagory=Sandwich"> Menu</Link>         
               </li>
               <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
-              <a href="/contact">Contact</a>              </li>
+              <Contactmodal />             </li>
             </ul>
           </div>
         </section>
 
         <ul className="DESKTOP-MENU hidden m-5 space-x-8 lg:flex">
           <li>
-          <Link to="/" className='bg-yellow-100'> Home</Link>          </li>
+          <Link to="/" className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Home</Link>          </li>
           <li>
-          <Link to="/Menu" className='bg-yellow-100'> Menu</Link>           </li>
-          <li>
-            <a href="/contact" className='bg-yellow-100'>Contact</a>
-          </li>
+          <Link to="/Menu?Catagory=Sandwich" className=' bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Menu</Link> 
+                    </li>
+                    <li>
+          <Link to="/Calories" className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Calories</Link> 
+                    </li> 
+          <li className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'>
+<Contactmodal />          </li>
         </ul>
       </nav>
      
