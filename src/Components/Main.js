@@ -50,15 +50,15 @@ dose of health
     <Catagories />
 
     </div>
-    <div className='grid grid-cols-2 gap-3 md:m-12'>
+    <div className='flex gap-3 md:m-12'>
 
-      <div className='justify-self-end '>
+      <div className=' '>
         <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-fit object-cover' />
       </div>
       <div >
       <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40 h-fit object-cover'/>
       </div>
-      <div className='justify-self-end '>
+      <div className=' '>
       <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40 h-fit object-cover'/>
       </div>
       <div>
