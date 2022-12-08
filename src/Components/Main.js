@@ -53,16 +53,16 @@ dose of health
     <div className='flex gap-3 md:m-12'>
 
       <div className=' '>
-        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-fit object-cover' />
+        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-20 md:h-fit object-cover' />
       </div>
       <div >
-      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40 h-fit object-cover'/>
+      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40 h-40 h-20 md:h-fit object-cover'/>
       </div>
       <div className=' '>
-      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40 h-fit object-cover'/>
+      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40  h-40 h-20 md:h-fit object-cover'/>
       </div>
       <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='md:w-96 w-40  h-fit object-cover' />
+      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='md:w-96 w-40 h-20 md:h-fit object-cover' />
       </div>
     </div>
     
