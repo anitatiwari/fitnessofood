@@ -6,6 +6,8 @@ import Basket from './Basket';
 import ProductList from './ProductList';
 import { useEffect, useState } from "react";
 import ClipLoader from 'react-spinners/ClipLoader';
+import { Outlet, Link } from "react-router-dom";
+
 import { css } from "@emotion/react";
 
 
@@ -58,22 +60,22 @@ const options = {
   
     <ul className=" md:p-12 p-3 flex md:flex-col flex-wrap md:gap-12 gap-5 text-sm md:text-xl font-bold m-5 ">
 <li >
-  <a href="?Catagory=Sandwich">Sandwich</a> 
+<a href="/Menu?Catagory=Sandwich">Sandwich</a> 
 </li>
 <li>
-<a href="?Catagory=Salat">Salat</a> 
+<a href="/Menu?Catagory=Salat">Salat</a> 
 
   </li>
 <li>
-<a href="?Catagory=Juice">Juice</a> 
+<a href="/Menu?Catagory=Juice">Juice</a> 
 
   </li>
   <li>
-  <a href="?Catagory=Power Shake">Power Shake</a> 
+  <a href="/Menu?Catagory=Power Shake">Power Shake</a> 
 
   </li>
   <li>
-  <a href="?Catagory=Power Shot">Power Shots</a> 
+  <a href="/Menu?Catagory=Power Shot">Power Shots</a> 
 
   </li>
     </ul>
