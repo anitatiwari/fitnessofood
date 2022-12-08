@@ -18,19 +18,22 @@ function Main() {
   
   <Header />
    <main>
-    <div className='flex flex-col md:flex-row justify-around md:p-12 shadow'>
+    <div className='flex flex-col md:flex-row md:justify-around md:p-12 shadow'>
       
-    <div className='flex flex-col gap-12 md:m-5 md:p-12 p-9' data-aos="fade-right"
+    <div className='flex flex-col justify-center gap-12 md:m-5 md:p-12 p-9' data-aos="fade-right"
       data-aos-duration="1000"
     
 >
-      <p className='md:text-[50px] text-4xl w-64 font-light font-serif text-slate-600  text-center tracking-wider leading-snug'>
+      <p className='md:text-[50px] text-3xl w-64 font-light font-serif text-slate-600  text-center tracking-wider leading-snug'>
       For your daily
 dose of health
 <FavoriteIcon sx={{color:'#DE8198'}} />
       </p>
-      <Link to="/Menu?Catagory=Sandwich" type="submit" className='text-center w-24 md:w-40   z-10 bg-yellow-100 tracking-wide text-md hover:bg-[#364259] hover:text-white rounded-md
+      <div className='flex justify-center'>
+     
+      <Link to="/Menu?Catagory=Sandwich" type="submit" className='text-center w-32 md:w-40   z-10 bg-yellow-100 tracking-wide text-md hover:bg-[#364259] hover:text-white rounded-md
    font-semibold p-2'>Explore Menu</Link>
+    </div>
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}
     </div>
     <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-left"
@@ -50,28 +53,28 @@ dose of health
     <div className='grid grid-cols-2 gap-3 md:m-12'>
 
       <div className='justify-self-end '>
-        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='w-96 h-fit object-cover' />
+        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-fit object-cover' />
       </div>
       <div >
-      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='w-96 h-fit object-cover'/>
+      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40 h-fit object-cover'/>
       </div>
       <div className='justify-self-end '>
-      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='w-96 h-fit object-cover'/>
+      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40 h-fit object-cover'/>
       </div>
       <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='w-96 h-fit object-cover' />
+      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='md:w-96 w-40  h-fit object-cover' />
       </div>
     </div>
     
     
-    <div className='flex md:p-12 justify-center md:gap-12 flex-col md:flex-row bg-[#FDFDEA]'  
+    <div className='flex md:p-12 p-12 justify-center md:gap-12  gap-8 flex-col md:flex-row bg-[#FDFDEA]'  
   
   >
-      <div className='text-xl flex flex-col gap-5  '>
-<div>
-  <p className='text-4xl text-left mt-5 mb-5'>Openning Hours</p>
-        <p className='font-semibold text-lg'>Weekdays</p>
-        <div className='flex md:justify-between gap-2'>
+      <div className='md:text-xl flex flex-col justify-center  gap-5  '>
+<div className=''>
+  <p className='md:text-4xl text-xl  mt-5 mb-5'>Openning Hours</p>
+        <p className='md:font-semibold text-lg'>Weekdays</p>
+        <div className='flex text-center md:justify-between gap-2'>
           
        
         <p>Monday - Friday  </p>
@@ -80,8 +83,8 @@ dose of health
         </div>
         <div>
 
-        <p className='font-semibold text-lg' >Weekends</p>
-        <div className='flex md:justify-between gap-2'>
+        <p className='md:font-semibold text-lg' >Weekends</p>
+        <div className='flex text-center md:justify-between gap-2'>
 
         <p>Saturday/Sunday   </p>
         <p>  10:00 - 19:00 </p>
@@ -96,25 +99,21 @@ dose of health
  </div>
        
  
-    <article className='g md:ml-12 grid md:grid-cols-2 gap-4 content-center   '>
-      <section className='md:p-12 justify-self-end  '>
-        <p className='text-xl font-semibold '>VISIT US</p>
-        {/* <p className='text-xl font-normal m-5'>Address</p> */}
-        <p className='text-xl   w-60 m-5'>Nørrebrogade 227, 2200 
+    <article className='m-5 md:ml-12 grid md:grid-cols-2 gap-4 justify-items-center'>
+      <section className='md:p-12 md:justify-self-end  m-2 grid gap-3 '>
+        <p className='md:text-xl font-semibold  '>VISIT US</p>
+        <p className='md:text-xl   w-60 md:m-5 '>Nørrebrogade 227, 2200 
 København, Denmark</p>
-{/* <button type="" className=' border-gray-400 underline  bg-yellow-100 p-2 m-4 rounded shadow'>
 
-              <Contactmodal  />             
-</button> */}
  <div className='md:m-5 flex gap-4 '>
-                    <p className='  font-semibold text-xl '>Call us at:</p>
-                    <a href="tel:5554280940" className='text-xl   w-30  hover:underline text-slate-600'>+4535858575</a>
+                    <p className='  font-semibold md:text-xl '>Call us at:</p>
+                    <a href="tel:5554280940" className='md:text-xl   w-30  hover:underline text-slate-600'>+4535858575</a>
                 </div>
       </section>
      
       <section className='md:p-12  '>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" 
-      className='md:w-1/2 md:h-full'  ></iframe>
+      className='md:w-full md:h-full w-60 '  ></iframe>
       </section>
     </article>
     <Footer />

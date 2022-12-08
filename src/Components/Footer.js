@@ -2,12 +2,12 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className=' h-56  shadow-xl'>
+    <div className=' h-56  md:shadow-xl md:m-0 m-8'>
         <div className='h-56  md:ml-12 grid md:grid-cols-3 gap-4 content-center'>
             
        
         <div className=''>
-            <img src="logo.svg" alt=""  className='w-44 h-fit'/>
+            <img src="logo.svg" alt=""  className='md:w-44 w-32 h-fit'/>
         </div>
         <div>
             <p>Address</p>
