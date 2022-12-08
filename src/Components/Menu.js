@@ -52,11 +52,11 @@ const options = {
     <Header />
    
    <main className="relative">
-    <div className='flex flex-col-3'>
+    <div className='md:flex md:flex-col-3 '>
     <div className='shadow-md ' >
     
   
-    <ul className=" p-12 flex flex-col gap-12 text-md md:text-xl font-bold m-5 ">
+    <ul className=" md:p-12 p-3 flex md:flex-col flex-wrap md:gap-12 gap-5 text-sm md:text-xl font-bold m-5 ">
 <li >
   <a href="?Catagory=Sandwich">Sandwich</a> 
 </li>
@@ -79,7 +79,7 @@ const options = {
     </ul>
     </div>
       
-         <div className='product  flex justify-between'>
+         <div className='product  flex md:flex-row  md:justify-between  flex-col'>
          {isLoading ? (
          
             
@@ -92,7 +92,7 @@ const options = {
 
      <ProductList className="  " products={products} setBasket={setBasket}/>
      )}
-     <BasketContainer className="bg-yellow-200"  setBasket={setBasket} basket={basket}/>
+     <BasketContainer className="bg-yellow-200 "  setBasket={setBasket} basket={basket}/>
 
     
      </div>

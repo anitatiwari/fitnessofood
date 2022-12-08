@@ -2,11 +2,15 @@ import React from 'react'
 import PersonIcon from '@mui/icons-material/Person';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import SignupModal from './SignupModal';
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 import { useState, useEffect } from 'react';
 
-function Contactmodal() {
+function LoginModal() {
   const [showModal, setShowModal] = React.useState(false);
+  const [value, setValue] = useState()
 
   return (
     <>
@@ -32,10 +36,20 @@ function Contactmodal() {
 
                     <div class="mt-8">
                         <form>
-                            <div>
-                                <label for="email" class="block mb-2 text-sm text-slate-600">Email Address</label>
-                                <input type="email" name="email" id="email" required placeholder="example@example.com" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            {/* <div>
+                                <label for="phone" class="block mb-2 text-sm text-slate-600">Phone Number</label>
+                                <div>
+                                    
+                                </div>
+                                <input type="phone" name="phone" id="phone" required placeholder="+4571462345" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
+      */}
+      <PhoneInput 
+        international
+  defaultCountry="DK"
+  value={value}
+  onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+
 
                             <div class="mt-6">
                                 <div class="flex justify-between mb-2">
@@ -62,8 +76,8 @@ function Contactmodal() {
 
                         </form>
 
-                        <p class="mt-6 text-sm text-center ">Don&#x27;t have an account yet? <a href="#" class="text-blue-500 focus:outline-none focus:underline hover:underline">Sign up</a>.</p>
-                    </div>
+<SignupModal   />         
+       </div>
                 </div>
             </div>
   </div>
@@ -76,5 +90,5 @@ function Contactmodal() {
   
 }
 
-export default Contactmodal
+export default LoginModal
 //  onClick={() => setShowModal(false)}
