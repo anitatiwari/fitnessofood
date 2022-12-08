@@ -43,12 +43,12 @@ function Nav() {
               </svg>
               </div>
             <ul className="NAVIGATION-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] z-20">
-              <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
+              <li className="border-b border-gray-400 m-8 uppercase ">
               <Link to="/"> Home</Link>                </li>
-              <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
+              <li className="border-b border-gray-400 m-8 uppercase ">
               <Link to="/Menu?Catagory=Sandwich"> Menu</Link>         
               </li>
-              <li className="border-b border-gray-400 m-8 uppercase bg-yellow-100">
+              <li className="border-b border-gray-400 m-8 uppercase ">
               <Contactmodal />             </li>
             </ul>
           </div>
@@ -56,14 +56,14 @@ function Nav() {
 
         <ul className="DESKTOP-MENU hidden m-5 space-x-8 lg:flex">
           <li>
-          <Link to="/" className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Home</Link>          </li>
+          <Link to="/" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Home</Link>          </li>
           <li>
-          <Link to="/Menu?Catagory=Sandwich" className=' bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Menu</Link> 
+          <Link to="/Menu?Catagory=Sandwich" className='  focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Menu</Link> 
                     </li>
                     <li>
-          <Link to="/Calories" className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Calories</Link> 
+          <Link to="/Calories" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Calories</Link> 
                     </li> 
-          <li className='bg-yellow-100 focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'>
+          <li className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'>
 <Contactmodal />          </li>
         </ul>
       </nav>

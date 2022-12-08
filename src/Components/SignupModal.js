@@ -4,20 +4,25 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 import { useState, useEffect } from 'react';
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+import LoginModal from './LoginModal';
 
-function Modal() {
-  const [showModal, setShowModal] = React.useState(false);
+function SignupModal() {
+  const [showSignupModal, setShowSignupModal] = React.useState(false);
+  const [value, setValue] = useState()
+
 
   return (
     <>
      <button
     className="active:bg-yellow-100 font-bold  px-6 py-3  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="button"
-    onClick={() => setShowModal(true)}
+    onClick={() => setShowSignupModal(true)}
   >
-    <PersonIcon className=''  color='blue' style={{color:""}}/>
+                        <p class="mt-6 text-sm text-center ">Don&#x27;t have an account yet? <a href="#" class="text-blue-500 focus:outline-none focus:underline hover:underline">Sign up</a>.</p>
   </button>
-  {showModal ? (
+  {showSignupModal ? (
     <>
     <div
     className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
@@ -32,10 +37,19 @@ function Modal() {
 
                     <div class="mt-8">
                         <form>
-                            <div>
-                                <label for="email" class="block mb-2 text-sm text-slate-600">Email Address</label>
-                                <input type="email" name="email" id="email" required placeholder="example@example.com" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                            </div>
+                     {/*   <div>
+                                <label for="phone" class="block mb-2 text-sm text-slate-600">Phone Number</label>
+                                <div> 
+                                    
+                                </div>
+                                <input type="phone" name="phone" id="phone" required placeholder="+4571462345" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div> */}
+                               <PhoneInput 
+        international
+  defaultCountry="DK"
+  value={value}
+  onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+
 
                             <div class="mt-6">
                                 <div class="flex justify-between mb-2">
@@ -49,10 +63,10 @@ function Modal() {
                             <div class="mt-6">
                                 <button
                                     class="w-full px-4 py-2 text-slate-600 tracking-wide  transition-colors duration-200 transform bg-yellow-100 rounded-md hover:bg-yellow-200 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                                    Sign in
+                                    Sign up
                                 </button>
                             </div>
-                            <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"   aria-label="close modal" role="button" onClick={() => setShowModal(false)}>
+                            <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"   aria-label="close modal" role="button" onClick={() => setShowSignupModal(false)}>
                             <svg  xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" />
                                 <line x1="18" y1="6" x2="6" y2="18" />
@@ -61,8 +75,13 @@ function Modal() {
                         </button>
 
                         </form>
-
-                        <p class="mt-6 text-sm text-center ">Don&#x27;t have an account yet? <a href="#" class="text-blue-500 focus:outline-none focus:underline hover:underline">Sign up</a>.</p>
+                        <button
+    className="active:bg-yellow-100 font-bold  px-6 py-3  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    type="button"
+    
+  >
+                        <p class="mt-6 text-sm text-center ">Already have an account? <a href="#" class="text-blue-500 focus:outline-none focus:underline hover:underline">Login</a>.</p>
+  </button>
                     </div>
                 </div>
             </div>
@@ -76,5 +95,5 @@ function Modal() {
   
 }
 
-export default Modal
+export default SignupModal
 //  onClick={() => setShowModal(false)}
