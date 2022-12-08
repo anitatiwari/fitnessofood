@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header';
+import CallIcon from '@mui/icons-material/Call';
 import Nav from './Nav';
 import { Outlet, Link } from "react-router-dom";
 import Catagories from './Catagories';
@@ -20,7 +21,7 @@ function Main() {
     <div className='flex flex-col md:flex-row justify-around md:p-12 shadow'>
       
     <div className='flex flex-col gap-12 md:m-5 md:p-12 p-9' data-aos="fade-right"
-      data-aos-duration="2000"
+      data-aos-duration="1000"
     
 >
       <p className='md:text-[50px] text-4xl w-64 font-light font-serif text-slate-600  text-center tracking-wider leading-snug'>
@@ -33,7 +34,7 @@ dose of health
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}
     </div>
     <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-left"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
   
    
   >
@@ -42,31 +43,31 @@ dose of health
     {/* scale-100 absolute top-[100px]    md:right-[200px] */}
     </div>
     
-    <div className='md:m-12 ' data-aos="fade-up">
+    <div className='md:m-12' data-aos="fade-up">
     <Catagories />
 
     </div>
-    <div className='flex flex-cols-2 gap-3 md:m-5'>
-      <div>
-        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="" className='w-96 h-fit object-cover' />
+    <div className='grid grid-cols-2 gap-3 md:m-12'>
+
+      <div className='justify-self-end '>
+        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='w-96 h-fit object-cover' />
+      </div>
+      <div >
+      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='w-96 h-fit object-cover'/>
+      </div>
+      <div className='justify-self-end '>
+      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='w-96 h-fit object-cover'/>
       </div>
       <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="" className='w-96 h-fit object-cover'/>
-      </div>
-      <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="" className='w-96 h-fit object-cover'/>
-      </div>
-      <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="" className='w-96 h-fit object-cover' />
+      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='w-96 h-fit object-cover' />
       </div>
     </div>
     
     
-    <div className='flex md:p-12 justify-center md:gap-12 flex-col md:flex-row bg-yellow-100'  
+    <div className='flex md:p-12 justify-center md:gap-12 flex-col md:flex-row bg-[#FDFDEA]'  
   
   >
-      <img src="https://www.anugraph.com/files/fitnesso-project/shop.png" alt="shop" className='md:w-96 md:h-72 object-cover w-40 content-conter border h-fit rounded shadow-md '/>
-      <div className='flex flex-col gap-5  '>
+      <div className='text-xl flex flex-col gap-5  '>
 <div>
   <p className='text-4xl text-left mt-5 mb-5'>Openning Hours</p>
         <p className='font-semibold text-lg'>Weekdays</p>
@@ -90,21 +91,25 @@ dose of health
       
     </div>
   
- <div className='md:h-96'>
+ <div className='md:h-96 shadow-md'>
  <Newsletter />
  </div>
        
  
     <article className='g md:ml-12 grid md:grid-cols-2 gap-4 content-center   '>
       <section className='md:p-12 justify-self-end  '>
-        <p className='text-xl font-semibold text-center'>VISIT US</p>
-        <p className='text-xl font-normal m-5'>Address</p>
-        <p className='text-xl   w-20 m-5'>Nørrebrogade 227, 2200 
+        <p className='text-xl font-semibold '>VISIT US</p>
+        {/* <p className='text-xl font-normal m-5'>Address</p> */}
+        <p className='text-xl   w-60 m-5'>Nørrebrogade 227, 2200 
 København, Denmark</p>
-<button type="" className=' border-gray-400 underline  bg-yellow-100 p-2 m-4 rounded shadow'>
+{/* <button type="" className=' border-gray-400 underline  bg-yellow-100 p-2 m-4 rounded shadow'>
 
               <Contactmodal  />             
-</button>
+</button> */}
+ <div className='md:m-5 flex gap-4 '>
+                    <p className='  font-semibold text-xl '>Call us at:</p>
+                    <a href="tel:5554280940" className='text-xl   w-30  hover:underline text-slate-600'>+4535858575</a>
+                </div>
       </section>
      
       <section className='md:p-12  '>
