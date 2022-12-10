@@ -6,8 +6,8 @@ import { Outlet, Link } from "react-router-dom";
 function Catagories() {
   return (
     <>
-    <div className='md:text-3xl md:m-12  text-green-800 text-center traking-wide '>
-       <p className='tracking-wider underline '>Our Veriety</p> </div>
+    <div className='md:text-3xl md:m-[1em]  text-green-800 text-center traking-wide '>
+       <p className='tracking-wider  md:mt-[3em] '>Our Veriety</p> </div>
     <div className='flex justify-center md:flex-row m-5 justify-evenly  gap-5	'>
         
     

@@ -15,7 +15,7 @@ function LoginModal() {
   return (
     <>
      <button
-    className="active:bg-yellow-100 font-bold  px-6 py-3  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    className="active:bg-yellow-100 font-bold  md:px-6 md:py-3  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="button"
     onClick={() => setShowModal(true)}
   >
@@ -47,6 +47,7 @@ function LoginModal() {
       <PhoneInput 
         international
   defaultCountry="DK"
+  required
   value={value}
   onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
 
@@ -57,7 +58,10 @@ function LoginModal() {
                                     <a href="#" class="text-sm  focus:text-blue-500 hover:text-blue-500 hover:underline">Forgot password?</a>
                                 </div>
 
-                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white
+                                 border border-gray-200 rounded-md   
+                                  focus:border-blue-400 dark:focus:border-blue-400 
+                                  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
 
                             <div class="mt-6">

@@ -5,8 +5,8 @@ function Calories() {
   return (
     <div>
         <Header />
-        <div>
-        <table className='table-auto '>
+        <div className='flex justify-center'>
+        <table className='table-auto  md:m-6 '>
   <tr>
     <th >Product</th>
     <th>Protein</th>

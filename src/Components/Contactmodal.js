@@ -20,8 +20,8 @@ Contact  </button>
     <div
     className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
   >
-  <div class="flex relative justify-items-center w-full bg-white p-5 max-w-md px-6  lg:w-2/6 rounded-lg shadow-md">
-  <div class="flex-1">
+  <div class="flex  relative justify-items-center w-4/6 bg-white p-5  px-6  lg:w-2/6 rounded-lg shadow-md">
+  <div class="">
                <div className='md:m-5'>
                 <img src="https://www.anugraph.com/files/fitnesso-project/food.jpeg" alt="food image" className=' object-cover' />
                 <div className=' bg-yellow-100'>
@@ -41,7 +41,7 @@ København, Denmark</p>
                 </div>
                 </div>
                </div>
-               <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"   aria-label="close modal" role="button" onClick={() => setShowModal(false)}>
+               <button class="cursor-pointer absolute top-0 right-0 md:mt-4 md:mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"   aria-label="close modal" role="button" onClick={() => setShowModal(false)}>
                             <svg  xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" />
                                 <line x1="18" y1="6" x2="6" y2="18" />

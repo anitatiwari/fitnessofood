@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from "react"; 
-
 import Menu from './Components/Menu';
 import ProductList from './Components/ProductList';
 import Main from './Components/Main';
@@ -10,7 +9,8 @@ import Basket from './Components/Basket';
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FavouriteContainer from './Components/FavouriteContainer';
 import Calories from './Components/Calories';
-
+import CheckoutForm from './Components/ProgressForm/CheckoutForm';
+import Delivery from './Components/ProgressForm/Delivery';
 function App() {
   
   return (
@@ -23,6 +23,8 @@ function App() {
   <Route exact path="/Product" element={<ProductList />} />
   <Route exact path="/Menu" element={<Menu />} />
   <Route exact path="/Calories" element={<Calories />} />
+  <Route exact path="/Delivery" element={<Delivery />} />
+
 
   <Route exact path="/Favorite" element={<FavouriteContainer />} />
 

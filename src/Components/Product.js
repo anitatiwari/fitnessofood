@@ -1,34 +1,33 @@
 import React from 'react'
-
+import Header from './Header';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Nav from './Nav';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ProductCounter from './ProductCounter';
+import CartIcon from './CartIcon';
 export default function Product (props){
     const [value, setValue] = React.useState(0);
 
     function buy(){
         props.setBasket((oldState)=>[...oldState,props.product])
     }
-    function fav(){
-      props.setFavorite((oldState)=>[...oldState,props.product])
-
-    }
+  
     
     
         return (
             <>
       <div >
    
-  
-        <article className=" rounded-xl w-72 md:w-11/12 md:shadow-2xl shadow-xl m-4"> 
+
+        <article className=" rounded-xl w-60 md:w-11/12 md:shadow-2xl shadow-xl m-4"> 
        <section className=" grid md:grid-cols-2 m-2 p-2 ">
         <div className=''>
           
        
-             <img src={props.product.Image} alt="productimage" className='object-cover h-48 w-full '/>
+             <img src={props.product.Image} alt="productimage" className='object-cover md:h-52 w-full '/>
              </div>
              <div>
               
@@ -40,23 +39,27 @@ export default function Product (props){
             <p className="md:text-xl  text-rose-800 font-bold  p-1 rounded-lg">
                {
                     props.product.Price
-                } Dkk
+                }  Dkk
             </p>
             </div>
-            <p className="md:font-medium leading-6 tracking-wider   rounded-y-xl  md:m-4 m-2">{props.product.Discription}</p>
+            <p className="md:font-medium leading-6 tracking-wider  rounded-y-xl  md:m-4 m-2">{props.product.Discription}</p>
            
+           <div className='flex justify-evenly'>
+            
+           <ProductCounter />
             <span className="  md:m-4 m-2">
             <button onClick={buy} className="rounded-md p-2 font-sans transition ease-in-out 
-            delay-150 bg-yellow-100 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300 text-black ">
+            delay-150 bg-yellow-100   hover:bg-yellow-200  duration-300 t">
            <div className='flex '>
-           <ShoppingCartIcon   sx={{ fontSize: 20, margin:"2px" }} />
-           <p className='text-sm'>    Add to Order
+           {/* <ShoppingCartIcon   sx={{ fontSize: 20, margin:"2px" }} /> */}
+           <p className='text-sm'> Order Now
 </p>
            </div>
    
             </button>
          
             </span>
+            </div> 
             </div>
             <div className='flex justify-between'>
                 

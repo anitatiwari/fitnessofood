@@ -18,39 +18,50 @@ function Main() {
   
   <Header />
    <main>
-    <div className='flex flex-col md:flex-row md:justify-around md:p-12 shadow'>
+    <div className='grid  md:grid-cols-2 md:justify-around justify-items-center md:p-8 shadow'>
       
-    <div className='flex flex-col justify-center gap-12 md:m-5 md:p-12 p-9' data-aos="fade-right"
+    <div className='flex flex-col justify-center gap-12 md:m-5  p-5' data-aos="fade-right"
       data-aos-duration="1000"
     
 >
-      <p className='md:text-[50px] text-3xl w-64 font-light font-serif text-slate-600  text-center tracking-wider leading-snug'>
+      <p className=' md:pl-5 md:text-[48px] justify-self-center text-3xl md:w-[386px] w-60 font-light font-serif text-slate-600   tracking-wider leading-snug'>
       For your daily
 dose of health
-<FavoriteIcon sx={{color:'#DE8198'}} />
+
       </p>
       <div className='flex justify-center'>
+      <FavoriteIcon sx={{color:'#DE8198'}} />
+      </div>
+      <div className='flex justify-center '>
      
       <Link to="/Menu?Catagory=Sandwich" type="submit" className='text-center w-32 md:w-40   z-10 bg-yellow-100 tracking-wide text-md hover:bg-[#364259] hover:text-white rounded-md
    font-semibold p-2'>Explore Menu</Link>
     </div>
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}
     </div>
-    <div className=' h-[80vh]  scale-105 z-0'   data-aos="fade-left"
+    <div className=' md:h-[80vh]  justify-self-center mt-12  z-0'   data-aos="fade-left"
         data-aos-duration="1000"
   
    
-  >
-      <img src="juice.png" alt="juiceimage" className='  '/>
+  >    
+    <img src="juice.png" alt="juiceimage" className='  scale-110 h-fit object-cover '/>
+
+      {/* <img src="juice.png" alt="juiceimage" className='  '/> */}
     </div>
     {/* scale-100 absolute top-[100px]    md:right-[200px] */}
     </div>
     
-    <div className='md:m-12' data-aos="fade-up">
+    <div className='md:m-12' >
     <Catagories />
 
     </div>
-    <div className='flex gap-3 md:m-12'>
+    <div>
+      <div className='md:m-[5em]'>
+        
+     
+      <h2 className='text-center md:text-3xl text-green-800  '>Gallary</h2>
+      </div>
+    <div className='flex gap-3 md:ml-[5em] md:mr-[5em] md:mb-[5em] md:mt-[3em]'>
 
       <div className=' '>
         <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-20 md:h-fit object-cover' />
@@ -66,10 +77,11 @@ dose of health
       </div>
     </div>
     
-    
+    </div>
     <div className='flex md:p-12 p-12 justify-center md:gap-12  gap-8 flex-col md:flex-row bg-[#FDFDEA]'  
   
   >
+    <img src="shopimg2.jpg" alt="shop" className='md:w-2/6 w-4/6 '/>
       <div className='md:text-xl flex flex-col justify-center  gap-5  '>
 <div className=''>
   <p className='md:text-4xl text-xl  mt-5 mb-5'>Openning Hours</p>
@@ -94,24 +106,24 @@ dose of health
       
     </div>
   
- <div className='md:h-96 shadow-md'>
+ <div className='md:m-[5em] md:h-96 '>
  <Newsletter />
  </div>
        
  
-    <article className='m-5 md:ml-12 grid md:grid-cols-2 gap-4 justify-items-center'>
-      <section className='md:p-12 md:justify-self-end  m-2 grid gap-3 '>
+    <article className='flex md:p-12 p-12 justify-center md:gap-12  gap-8 flex-col md:flex-row bg-[#FDFDEA]'>
+      <section className='md:p-12 md:justify-self-end  m-2 grid gap-5 '>
         <p className='md:text-xl font-semibold  '>VISIT US</p>
-        <p className='md:text-xl   w-60 md:m-5 '>Nørrebrogade 227, 2200 
+        <p className='md:text-xl   w-60  '>Nørrebrogade 227, 2200 
 København, Denmark</p>
 
- <div className='md:m-5 flex gap-4 '>
+ <div className=' flex gap-4 '>
                     <p className='  font-semibold md:text-xl '>Call us at:</p>
                     <a href="tel:5554280940" className='md:text-xl   w-30  hover:underline text-slate-600'>+4535858575</a>
                 </div>
       </section>
      
-      <section className='md:p-12  '>
+      <section className='md:p-4 '>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" 
       className='md:w-full md:h-full w-60 '  ></iframe>
       </section>

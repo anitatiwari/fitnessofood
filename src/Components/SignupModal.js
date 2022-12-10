@@ -1,4 +1,6 @@
 import React from 'react'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+
 import PersonIcon from '@mui/icons-material/Person';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -44,27 +46,68 @@ function SignupModal() {
                                 </div>
                                 <input type="phone" name="phone" id="phone" required placeholder="+4571462345" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div> */}
-                               <PhoneInput 
+    
+
+<Formik className="flex flex-col text-black"
+       initialValues={{ email: '', password: '' }}
+       validate={values => {
+         const errors = {};
+         if (!values.email) {
+           errors.email = 'Required';
+         } else if (
+           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+         ) {
+           errors.email = 'Invalid email address';
+         }
+         return errors;
+       }}
+       onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+     >
+       {({ isSubmitting }) => (
+         <Form >
+                                       <PhoneInput 
         international
   defaultCountry="DK"
   value={value}
-  onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-
-
-                            <div class="mt-6">
+  onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 
+  placeholder-gray-400 bg-white border border-gray-200 rounded-md   
+   focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 
+   focus:outline-none focus:ring focus:ring-opacity-40" />
+   <label  name="email">Email</label>
+           <Field type="email" required name="email"className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border 
+                                border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 
+                                focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+           <ErrorMessage name="email" component="div" className='text-rosse-800'/>
+           <Field type="password" placeholder="Password " name="password" className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border 
+                                border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 
+                                focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+           <ErrorMessage name="password" component="div" />
+           <button type="submit" disabled={isSubmitting} className="w-full px-4 py-2 text-slate-600 tracking-wide  transition-colors duration-200 
+                                    transform bg-yellow-100 rounded-md hover:bg-yellow-200 focus:outline-none focus:bg-blue-400 
+                                    focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+             Submit
+           </button>
+         </Form>
+       )}
+     </Formik>
+                            {/* <div class="mt-6">
                                 <div class="flex justify-between mb-2">
                                     <label for="password" class="text-sm required text-slate-600">Password</label>
                                     <a href="#" class="text-sm  focus:text-blue-500 hover:text-blue-500 hover:underline">Forgot password?</a>
                                 </div>
 
-                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                            </div>
+                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border 
+                                border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 
+                                focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div> */}
 
                             <div class="mt-6">
-                                <button
-                                    class="w-full px-4 py-2 text-slate-600 tracking-wide  transition-colors duration-200 transform bg-yellow-100 rounded-md hover:bg-yellow-200 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                                    Sign up
-                                </button>
+                               
                             </div>
                             <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"   aria-label="close modal" role="button" onClick={() => setShowSignupModal(false)}>
                             <svg  xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

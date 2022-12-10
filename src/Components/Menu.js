@@ -1,4 +1,6 @@
 import React from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
+
 import BasketContainer from './BasketContainer';
 import Header from './Header';
 import Nav from './Nav';
@@ -55,13 +57,14 @@ const options = {
    
    <main className="relative">
     <div className='md:flex md:flex-col-3 '>
-    <div className='shadow-md ' >
+    <div className='shadow-md bg-[#FDFDEA]' >
     
   
-    <ul className=" md:p-12 p-3 flex md:flex-col flex-wrap md:gap-12 gap-5 text-sm md:text-xl font-bold m-5 ">
-<li >
-<a href="/Menu?Catagory=Sandwich">Sandwich</a> 
-</li>
+    <ul className=" md:p-8 p-3 flex md:flex-col flex-wrap md:gap-12 gap-5 text-sm md:text-xl md:w-30 font-bold m-5 ">
+<li className="hover:underline active:text-rose-800 visited:text-rose-800" >
+ 
+<a href="?Catagory=Sandwich" type="submit" className=' 
+ '>Sandwich</a></li>
 <li>
 <a href="/Menu?Catagory=Salat">Salat</a> 
 
@@ -78,23 +81,27 @@ const options = {
   <a href="/Menu?Catagory=Power Shot">Power Shots</a> 
 
   </li>
+  <li>
+  <a href="/Menu?Catagory=Chia Bowl">Chia Bowl</a> 
+
+  </li>
     </ul>
     </div>
       
-         <div className='product  flex md:flex-row  md:justify-between  flex-col'>
+         <div className='product  flex md:flex-row    flex-col'>
          {isLoading ? (
          
             
          
             <div className="grid justify-items-center loader-container w-[800px] h-fit content-center" >
-          <ClipLoader color={'#274E13'} size={100}   />
-    
+          {/* <ClipLoader color={'#274E13'} size={100}   /> */}
+    <CircularProgress   color="success" width="10px"/>
         </div>
       ) : (
 
      <ProductList className="  " products={products} setBasket={setBasket}/>
      )}
-     <BasketContainer className="bg-yellow-200 "  setBasket={setBasket} basket={basket}/>
+     <BasketContainer className="bg-yellow-200  "  setBasket={setBasket} basket={basket}/>
 
     
      </div>
