@@ -1,11 +1,14 @@
 import React from 'react'
+import Success from './Success';
+import { Outlet, Link } from "react-router-dom";
+
 
 function CheckoutForm() {
  
  
 
       return (
-        <div className='shadow-md m-4 tracking-wider'>
+        <div className='shadow-md mb-4 tracking-wider'>
            <div className='flex justify-center'>
           <img src="card-blue.svg" alt="card icon" className='md:w-4/6 w-2/6 ' />
            </div>
@@ -54,7 +57,9 @@ function CheckoutForm() {
             </div>
          
             <div class="flex justify-center" id="pay-now">
-                <button type="submit" class="bg-blue-400 hover:bg-blue-600 m-2 text-white p-2 rounded w-32" id="confirm-purchase">Confirm</button>
+                <Link to="/Success">
+                <button   type="submit" class="bg-blue-700 hover:bg-blue-500 m-2 text-white p-2 rounded w-32" id="confirm-purchase">Pay</button>
+                </Link>
             </div>
         </form>
 

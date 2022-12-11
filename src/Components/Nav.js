@@ -12,7 +12,7 @@ function Nav() {
   {/* 
  */}
   <nav>
-        <section className="MOBILE-MENU flex lg:hidden">
+        <section className="MOBILE-MENU flex lg:hidden z-20">
           <div
             className="HAMBURGER-ICON space-y-2 m-5"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
@@ -23,7 +23,7 @@ function Nav() {
             <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav" }  > 
             <div
               className="absolute top-0 right-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
@@ -42,7 +42,7 @@ function Nav() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
               </div>
-            <ul className="NAVIGATION-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] z-20">
+            <ul className="NAVIGATION-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] ">
               <li className="border-b border-gray-400 m-8 uppercase ">
               <Link to="/"> Home</Link>                </li>
               <li className="border-b border-gray-400 m-8 uppercase ">
@@ -56,14 +56,14 @@ function Nav() {
 
         <ul className="DESKTOP-MENU hidden m-5 space-x-8 lg:flex">
           <li>
-          <Link to="/" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Home</Link>          </li>
+          <Link to="/" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover:underline'> Home</Link>          </li>
           <li>
-          <Link to="/Menu?Catagory=Sandwich" className='  focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Menu</Link> 
+          <Link to="/Menu?Catagory=Sandwich" className='  focus:outline-none mr-1 mb-1 ease-linear hover:underline transition-all duration-150'> Menu</Link> 
                     </li>
                     <li>
-          <Link to="/Calories" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'> Calories</Link> 
+          <Link to="/Calories" className=' focus:outline-none mr-1 mb-1 ease-linear transition-all hover:underline duration-150'> Calories</Link> 
                     </li> 
-          <li className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'>
+          <li className=' focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 '>
 <Contactmodal />          </li>
         </ul>
       </nav>

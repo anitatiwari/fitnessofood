@@ -10,7 +10,7 @@ function Contactmodal() {
   return (
     <>
      <button
-    className="focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    className=" hover:underline focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="button"
     onClick={() => setShowModal(true)}
   >
@@ -18,26 +18,26 @@ Contact  </button>
   {showModal ? (
     <>
     <div
-    className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+    className="tracking-wide justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
   >
-  <div class="flex  relative justify-items-center w-4/6 bg-white p-5  px-6  lg:w-2/6 rounded-lg shadow-md">
+  <div class="flex  relative justify-items-center w-4/6 bg-white p-3  lg:w-2/6 rounded-lg shadow-md">
   <div class="">
                <div className='md:m-5'>
                 <img src="https://www.anugraph.com/files/fitnesso-project/food.jpeg" alt="food image" className=' object-cover' />
-                <div className=' bg-yellow-100'>
-                <div className='md:m-5'>
+                <div className=' text-center bg-yellow-100'>
+                <div className='md:mb-5'>
                    
-                    <p className=' m-2 font-semibold text-rose-800 '>VISIT US AT :</p>
-        <p className='text-xl   w-30 m-5'>Nørrebrogade 227, 2200 
+                    <p className=' m-2 font-semibold text-rose-900 '>VISIT US AT :</p>
+        <p className='text-[16px] tracking-wide  w-30 mb-5'>Nørrebrogade 227, 2200 
 København, Denmark</p>
                 </div>
                 <div className='md:m-5'>
-                    <p className=' m-2 font-semibold '>Call Us at:</p>
-                    <a href="tel:5554280940" className='text-xl   w-30 m-5'>+4535858575</a>
+                    <p className=' m-2 font-semibold text-rose-900 '>Call Us at:</p>
+                    <a href="tel:5554280940" className='text-[18px]   w-30 mb-5'>+4535858575</a>
                 </div>
                 <div className='md:m-5'>
-                    <p className=' m-2 font-semibold '>Email Us at:</p>
-                    <a href="mailto:info@fitnessofood.dk" className='text-xl   w-30 m-5'>info@fitnessofood.dk</a>
+                    <p className=' m-2 font-semibold text-rose-900'>Email Us at:</p>
+                    <a href="mailto:info@fitnessofood.dk" className='   w-30 mb-5 '>info@fitnessofood.dk</a>
                 </div>
                 </div>
                </div>

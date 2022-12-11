@@ -56,7 +56,7 @@ export default function basket(props) {
                 <div className='text-xl'>
                
                {item.Name }</div>
-<div>
+<div className=''>
   
   {item.Image.src}
 </div>
@@ -78,9 +78,9 @@ export default function basket(props) {
        
         <p className="text-xl bg-slate-900 text-white text-center p-2 m-3">Total: <span className='font-bold'>{sumWithInitial} Dkk </span> </p>
        
-       <div className='flex justify-center m-5'>
+       <div className='flex justify-center m-3'>
         
-       <Link to="/Delivery" className='p-2 bg-yellow-900 text-white w-40 rounded'>  Proceed To Payment</Link> 
+       <Link to="/Delivery" className='p-2 bg-pink-100 hover:bg-pink-200 tracking-wider   w-3/6 rounded'>  Proceed To Payment</Link> 
      
        </div> 
        </div>

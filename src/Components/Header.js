@@ -14,17 +14,19 @@ function Header(props) {
 
 
   return (
-    <div className='flex  md:p-6 justify-between shadow-md'>
+    <div className='flex  md:p-3 justify-around shadow-md'>
         <Nav />
+<div className='flex '>
+  
 
-    <img src="logo.svg" alt="logo" className='h-12 w-54 m-2 md:h-16'/>
-
+    <img src="logo.svg" alt="logo" className='h-12 w-56  md:h-16'/>
+    </div>
     <div className=' flex md:gap-6  justify-around  md:m-5 '>
   
         
 <LoginModal />
 
-<CartIcon />
+
 
   
     </div>

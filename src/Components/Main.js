@@ -18,7 +18,7 @@ function Main() {
   
   <Header />
    <main>
-    <div className='grid  md:grid-cols-2 md:justify-around justify-items-center md:p-8 shadow'>
+    <div className='grid  md:grid-cols-2 md:justify-evenly justify-items-center md:p-8 shadow'>
       
     <div className='flex flex-col justify-center gap-12 md:m-5  p-5' data-aos="fade-right"
       data-aos-duration="1000"
@@ -34,7 +34,7 @@ dose of health
       </div>
       <div className='flex justify-center '>
      
-      <Link to="/Menu?Catagory=Sandwich" type="submit" className='text-center w-32 md:w-40   z-10 bg-yellow-100 tracking-wide text-md hover:bg-[#364259] hover:text-white rounded-md
+      <Link to="/Menu?Catagory=Sandwich" type="submit" className='text-center w-32 md:w-40   z-0 bg-yellow-100 tracking-wide text-md hover:bg-yellow-200  rounded-md
    font-semibold p-2'>Explore Menu</Link>
     </div>
    {/* absolute top-[250px] md:top-[500px] left-[145px] */}

@@ -11,6 +11,7 @@ import FavouriteContainer from './Components/FavouriteContainer';
 import Calories from './Components/Calories';
 import CheckoutForm from './Components/ProgressForm/CheckoutForm';
 import Delivery from './Components/ProgressForm/Delivery';
+import Success from './Components/ProgressForm/Success';
 function App() {
   
   return (
@@ -24,6 +25,7 @@ function App() {
   <Route exact path="/Menu" element={<Menu />} />
   <Route exact path="/Calories" element={<Calories />} />
   <Route exact path="/Delivery" element={<Delivery />} />
+  <Route exact path="/Success" element={<Success />} />
 
 
   <Route exact path="/Favorite" element={<FavouriteContainer />} />
