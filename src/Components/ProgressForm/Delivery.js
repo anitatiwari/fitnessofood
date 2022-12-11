@@ -14,6 +14,7 @@ import basket from '../Basket';
 import { useEffect, useState } from "react";
 import Checkbox from '@mui/material/Checkbox';
 import AddressForm from './AddressForm';
+import Footer from '../Footer';
 
 
 
@@ -55,6 +56,7 @@ export function Delivery  (props) {
         <AddressForm />
         <CheckoutForm />
         </div>
+        <Footer />
         </div>
   )
 }

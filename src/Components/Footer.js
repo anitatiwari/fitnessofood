@@ -1,9 +1,10 @@
 import React from 'react'
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 function Footer() {
   return (
     <div className=' h-56  md:shadow-xl md:m-0 m-8'>
-        <div className='h-56  md:ml-12 grid md:grid-cols-3 gap-4 content-center'>
+        <div className='h-56  md:ml-12 grid md:grid-cols-4 gap-7 content-center'>
             
        
         <div className=''>
@@ -18,6 +19,10 @@ function Footer() {
         <div>
             <a href="https://www.findsmiley.dk/570265" className='underline text-md '>See the Danish Veterinary and Food Administration's smiley reports
 </a>
+        </div>
+        <div className='flex gap-10 m-5'>
+        <FacebookIcon fontSize='large' sx={{ color: "#00008b" }} />
+        <InstagramIcon fontSize='large' sx={{ color: "#cb4154" }} />
         </div>
         <div>
         </div>

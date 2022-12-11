@@ -23,7 +23,7 @@ function Newsletter() {
                                 <div className='flex justify-center m-2 md:m-0 '>
                                     
                                 
-                            <button type="button" className='bg-black text-white md:p-5 p-3 h-fit  w-32'>
+                            <button type="button" className='bg-[#792653] text-white md:p-5 p-3 h-fit  w-32'>
                                 Subscribe</button>
                                 </div>
                             </div>
