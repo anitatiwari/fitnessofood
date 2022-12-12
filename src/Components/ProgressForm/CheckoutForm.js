@@ -3,10 +3,28 @@ import Success from './Success';
 import { Outlet, Link } from "react-router-dom";
 
 
-function CheckoutForm() {
- 
- 
+class CheckoutForm extends React.Component {
 
+    state = {
+        cardNumber: '',
+        expirationDate: '',
+        cvv: '',
+      };
+      handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value,
+        });
+      };
+   handleSubmit = (event) => {
+        event.preventDefault();
+    
+        // Perform basic validation on the form fields
+        if (!this.state.cardNumber || !this.state.expirationDate || !this.state.cvv) {
+          alert('All fields are required');
+          return;
+    }
+}
+    render() {
       return (
         <div className='shadow-md mb-4 tracking-wider'>
            <div className='flex justify-center'>
@@ -15,18 +33,20 @@ function CheckoutForm() {
            <form className='W-full '>
             <div class="flex  flex-col gap-2 md:m-5  ">
                 <label for="owner" className='w-32  text-gray-500'>Owner</label>
-                <input type="text" class=" border border-5 bg-gray-100  p-2" id="owner" />
+                <input required type="text" class=" border border-5 bg-gray-100  p-2" id="owner" />
             </div>
             <div class=" flex flex-col gap-2 md:m-5" id="card-number-field ">
                 <label for="cardNumber" className='w-30 text-gray-500'>Card Number</label>
-                <input type="text" class="border bg-gray-100 p-2" id="cardNumber" />
+                <input      value={this.state.cardNumber}
+            onChange={this.handleChange} type="text" class="border bg-gray-100 p-2" id="cardNumber" />
             </div>
             <div className='flex'>
               
            
             <div class="flex md:flex-col  gap-2 md:m-5">
                 <label for=" flex   " className='text-gray-500 '>CVV</label>
-                <input type="text" class="border bg-gray-100 w-32 p-2" id="cvv" />
+                <input     value={this.state.cvv}
+            onChange={this.handleChange} type="text" class="border bg-gray-100 w-32 p-2" id="cvv" />
             </div>
           
             <div class="flex justify-between flex  gap-2 md:m-5 " id="expiration-date">
@@ -57,8 +77,8 @@ function CheckoutForm() {
             </div>
          
             <div class="flex justify-center" id="pay-now">
-                <Link to="/Success">
-                <button   type="submit" class="bg-blue-700 hover:bg-blue-500 m-2 text-white p-2 rounded w-32" id="confirm-purchase">Pay</button>
+                <Link to="/Success" >
+                <input type="submit" class="bg-blue-700 hover:bg-blue-500 m-2 text-white p-2 rounded w-32" id="confirm-purchase" value="pay"/>
                 </Link>
             </div>
         </form>
@@ -66,9 +86,7 @@ function CheckoutForm() {
         </div>
       )
     }
-    
-  
-  
+}
 
 
 export default CheckoutForm;

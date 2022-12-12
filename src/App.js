@@ -12,6 +12,7 @@ import Calories from './Components/Calories';
 import CheckoutForm from './Components/ProgressForm/CheckoutForm';
 import Delivery from './Components/ProgressForm/Delivery';
 import Success from './Components/ProgressForm/Success';
+import Newsletter from './Components/Newsletter';
 function App() {
   
   return (
@@ -27,6 +28,9 @@ function App() {
   <Route exact path="/Calories" element={<Calories />} />
   <Route exact path="/Delivery" element={<Delivery />} />
   <Route exact path="/Success" element={<Success />} />
+  <Route exact path="/Newsletter" element={<Newsletter />} />
+
+
 
 
   <Route exact path="/Favorite" element={<FavouriteContainer />} />
