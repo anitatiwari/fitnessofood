@@ -10,12 +10,21 @@ import Contactmodal from './Contactmodal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Newsletter from './Newsletter';
+import { Helmet } from 'react-helmet';
+
 AOS.init();
 
 function Main() {
   return (
-    <>
   
+    <>
+  <Helmet>
+    <meta name="description" content="Visit our cafe for delicious, healthy options made with fresh ingredients.
+      Try our refreshing juices, flavorful salads, satisfying sandwiches, and rich, aromatic coffee. 
+      Come taste the difference at Fitnesso" />
+     <meta name="keywords" content="Food, Cafe Near Me, 
+     Coffee in Copenhagen, Salat , Fresh Juice , Healthy Food, Whey Protein Powder" />
+    </Helmet>
   <Header />
    <main>
     <div className='grid  md:grid-cols-2 md:justify-evenly justify-items-center md:p-8 shadow'>
