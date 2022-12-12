@@ -33,7 +33,7 @@ function Main() {
       data-aos-duration="1000"
     
 >
-      <p className=' md:pl-5 md:text-[48px] justify-self-center text-3xl md:w-[386px] w-60 font-light font-serif text-slate-600   tracking-wider leading-snug'>
+      <p className=' md:pl-5 md:text-[48px] justify-self-center text-3xl md:w-[386px] w-60 font-light font-serif text-slate-700   tracking-wider leading-snug'>
       For your daily
 dose of health
 
