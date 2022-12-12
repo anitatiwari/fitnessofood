@@ -2,7 +2,7 @@ import React from 'react'
 
 function Newsletter() {
   return (
-    <div className='md:p-12  p-6 flex gap-12  md:justify-center  flex-col  '>
+    <div id="newsletter" className='md:p-12  p-6 flex gap-12  md:justify-center  flex-col  '>
         <div className='md:flex flex justify-center '>
             
       
