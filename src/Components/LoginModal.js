@@ -1,7 +1,7 @@
 import React from 'react'
+
 import PersonIcon from '@mui/icons-material/Person';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+
 import SignupModal from './SignupModal';
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
@@ -19,7 +19,8 @@ function LoginModal() {
     type="button"
     onClick={() => setShowModal(true)}
   >
-    <PersonIcon className=''  color='blue' style={{color:""}}/>
+    <PersonIcon  color='blue' style={{color:""}}/>
+ 
   </button>
   {showModal ? (
     <>
