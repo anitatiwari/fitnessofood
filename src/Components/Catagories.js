@@ -14,14 +14,14 @@ function Catagories() {
     <div>
     <Link to="/Menu?Catagory=Juice" type="submit" className='  hover:scale-105 hover:underline
    '>
-    <img src="orange-juice.png" alt="orange-juice" className='md:w-20 w-12 md:h-fit h-12 object-cover'/>
+    <img src="https://www.anugraph.com/files/fitnesso-project/orange-juice.png" alt="orange-juice" className='md:w-20 w-12 md:h-fit h-12 object-cover'/>
 <p className='text-center p-2'>Drinks</p>
 </Link>
     </div>
     <div>
     <Link to="/Menu?Catagory=Sandwich" type="submit" className=' hover:scale-105 hover:underline
    '>
-    <img src="food.png" alt="salat bowl" className='md:w-20  w-12 md:h-fit h-12 object-cover' />
+    <img src="https://www.anugraph.com/files/fitnesso-project/food.png" alt="salat bowl" className='md:w-20  w-12 md:h-fit h-12 object-cover' />
 
     <p className='text-center p-2 '>Food</p>
     </Link>
@@ -29,7 +29,7 @@ function Catagories() {
     <div>
     <Link to="/Menu?Catagory=Juice" type="submit" className='  hover:scale-105 hover:underline
    '>
-    <img src="whey-protein.png" alt="salat bowl" className='md:w-20  w-12 md:h-fit h-12 object-cover'/>
+    <img src="https://www.anugraph.com/files/fitnesso-project/whey-protein.png" alt="salat bowl" className='md:w-20  w-12 md:h-fit h-12 object-cover'/>
     <p className='text-center p-2'>Bodylab</p>
     </Link>
         </div>
