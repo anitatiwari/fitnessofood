@@ -30,7 +30,9 @@ function Header(props) {
 
   
     </div>
-
+       <div>
+         <button type='button'> Newsletter </button>
+       </div>
 
     </div>
   )
