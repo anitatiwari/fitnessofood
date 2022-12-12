@@ -14,7 +14,7 @@ function LoginModal() {
 
   return (
     <>
-     <button
+     <button aria-label="login Modal"
     className="active:bg-yellow-100 font-bold  md:px-6 md:py-3  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="button"
     onClick={() => setShowModal(true)}
