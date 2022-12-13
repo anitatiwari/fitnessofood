@@ -21,7 +21,10 @@ function Header(props) {
 
     <img src="logo.svg" alt="logo" className='h-12 w-56  md:h-16'/>
     </div>
-    <div className=' flex md:gap-6  justify-around  md:m-5 '>
+    <div className='flex '>
+      
+  
+    <div className=' flex justify-around  md:m-5 '>
   
         
 <LoginModal />
@@ -30,8 +33,11 @@ function Header(props) {
 
   
     </div>
-       <div>
-         <button type='button'> Newsletter </button>
+       <div className='md:m-5 '>
+        <Link to="/#newsletter">
+       Newsletter 
+         </Link>
+       </div>
        </div>
 
     </div>

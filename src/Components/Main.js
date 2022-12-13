@@ -10,13 +10,25 @@ import Contactmodal from './Contactmodal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Newsletter from './Newsletter';
+import { Helmet } from 'react-helmet';
+
 AOS.init();
 
 function Main() {
   return (
-    <>
   
+    <>
+  <Helmet>
+    <meta name="description" content="Visit our cafe for delicious,
+     healthy options made with fresh ingredients.
+      Try our refreshing juices, flavorful salads, satisfying sandwiches, and rich, aromatic coffee. 
+      Come taste the difference at Fitnesso" />
+     <meta name="keywords" content="Food, Cafe Near Me, 
+     Coffee in Copenhagen, Salat , Fresh Juice , Healthy Food, Whey Protein Powder" />
+    </Helmet>
   <Header />
+
+
    <main>
     <div className='grid  md:grid-cols-2 md:justify-evenly justify-items-center md:p-8 shadow'>
       
@@ -24,7 +36,7 @@ function Main() {
       data-aos-duration="1000"
     
 >
-      <p className=' md:pl-5 md:text-[48px] justify-self-center text-3xl md:w-[386px] w-60 font-light font-serif text-slate-600   tracking-wider leading-snug'>
+      <p className=' md:pl-5 md:text-[48px] justify-self-center text-3xl md:w-[386px] w-60 font-light font-serif text-slate-700   tracking-wider leading-snug'>
       For your daily
 dose of health
 
@@ -124,7 +136,7 @@ København, Denmark</p>
       </section>
      
       <section className='md:p-4 '>
-      <iframe name="Google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" 
+      <iframe title="Google map" aria-label="Google map image" aria-describedby="Google map of Fitnesso" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3832938041155!2d12.538242851344062!3d55.69970900345777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524c6746f357%3A0x57a56311b00bcdb3!2sFitnesso!5e0!3m2!1sen!2sdk!4v1670325213448!5m2!1sen!2sdk" 
       className='md:w-full md:h-full w-60 '  ></iframe>
       </section>
     </article>
