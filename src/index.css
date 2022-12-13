@@ -35,3 +35,6 @@ th, td {
 tr:nth-of-type(even) {
   background-color:rgba(241, 242, 208, 0.748);
 }
+li.selected {
+  color: red;
+}

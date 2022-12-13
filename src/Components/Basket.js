@@ -15,7 +15,14 @@ export default function basket(props) {
       (previousValue, currentValue) => previousValue + parseFloat(currentValue.Price),
       initialValue
     );
-    
+    function checkbasket(){
+      if (props.basket.length > 0) {
+        // Proceed with payment
+      } else {
+
+      }
+    }
+ 
     function remove(id) {
         // Find the index of the item with the specified id
 
@@ -80,7 +87,7 @@ export default function basket(props) {
        
        <div className='flex justify-center m-3'>
         
-       <Link to="/Delivery" className='p-2 bg-pink-100 hover:bg-pink-200 tracking-wider   w-3/6 rounded'>  Proceed To Payment</Link> 
+       <Link to="/Delivery"  className='p-2 bg-pink-100 hover:bg-pink-200 tracking-wider   w-3/6 rounded'>  Proceed To Payment</Link> 
      
        </div> 
        </div>
