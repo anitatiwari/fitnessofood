@@ -12,6 +12,8 @@ import { Outlet, Link } from "react-router-dom";
 
 import { css } from "@emotion/react";
 
+const urlParams = new URLSearchParams(window.location.search);
+const Catagory = urlParams.get("Catagory");
 
 
 
@@ -61,28 +63,32 @@ const options = {
     
   
     <ul className=" md:p-8 p-3 flex md:flex-col flex-wrap md:gap-12 gap-5 text-sm md:text-xl md:w-30 font-bold m-5 ">
-<li className="hover:underline active:text-rose-800 visited:text-rose-800" >
+<li className={Catagory === "Sandwich" ? "selected" : ""} >
  
 <a href="?Catagory=Sandwich" type="submit" className=' 
  '>Sandwich</a></li>
-<li>
+<li  className={Catagory === "Salat" ? "selected" : ""} >
 <a href="/Menu?Catagory=Salat">Salat</a> 
 
   </li>
-<li>
+<li className={Catagory === "Juice" ? "selected" : ""} >
 <a href="/Menu?Catagory=Juice">Juice</a> 
 
   </li>
-  <li>
+  <li className={Catagory === "Power Shake" ? "selected" : ""}>
   <a href="/Menu?Catagory=Power Shake">Power Shake</a> 
 
   </li>
-  <li>
+  <li className={Catagory === "Power Shot" ? "selected" : ""}>
   <a href="/Menu?Catagory=Power Shot">Power Shots</a> 
 
   </li>
-  <li>
+  <li className={Catagory === "Chia Bowl" ? "selected" : ""}>
   <a href="/Menu?Catagory=Chia Bowl">Chia Bowl</a> 
+
+  </li>
+  <li className={Catagory === "Bodylab" ? "selected" : ""}>
+  <a href="/Menu?Catagory=Bodylab">Body lab</a> 
 
   </li>
     </ul>

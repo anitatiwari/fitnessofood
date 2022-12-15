@@ -5,13 +5,13 @@ function AddressForm() {
     <div>
      
 
-      <form  id="form2" class= " md:m- md:max-w-xl  border shadow  rounded ">
+      <form  id="form2" class= " max-w-xl md:max-w-xl  border shadow  rounded ">
       <div>
       <h2 className='text-xl tracking-wider m-4 '>Delivery Adddress</h2>
 
       </div>
-                        <div class="flex  flex-col gap-4   ">
-                            <div class=" flex  justify-between p-3  ">
+                        <div class="flex  flex-col md:gap-4   ">
+                            <div class=" flex justify-around md:justify-between md:p-3  ">
                                 <div class="px-3 mb-6 md:mb-0">
                                     <label class="block uppercase  text-gray-600 tracking-wider tracking-wide  text-sm md:text-md font-bold mb-2"
                                         for="grid-first-name">
@@ -23,7 +23,7 @@ function AddressForm() {
     
     
                                 </div>
-                                <div class=" md:w-full px-3 mb-6 md:mb-0">
+                                <div class=" md:w-full md:px-3 md:mb-6 md:mb-0">
                                         <label class="block uppercase   text-xs font-bold mb-2 text-gray-600 tracking-wider"
                                             for="grid-city">
                                             House No.
@@ -38,7 +38,7 @@ function AddressForm() {
                                
                                
                                 <div class=" px-3 mb-6 flex flex-col tracking-wider">
-                                  <div className='flex  justify-between p-3  '>
+                                  <div className='flex justify-around md:justify-between m-2 md:p-3 '>
                                     
                                  
                                     <div class=" w-full mb-6 md:mb-0">
@@ -63,9 +63,9 @@ function AddressForm() {
                                     <div className='text-left shadow '>
                                         
                                    
-                                    <h2 className='md:text-xl md:m-4'>Contact Information</h2>
+                                    <h2 className='md:text-xl m-4'>Contact Information</h2>
                                
-                                    <div className='flex  justify-between px-2 '>
+                                    <div className='flex  justify-around  md:justify-between px-2 '>
                                      
                                    
                                     <div class="md:w-full md:w-full px-3 ">
@@ -87,7 +87,9 @@ function AddressForm() {
                                     </div>
                                     </div>
                                 </div>
-                         
+                         <div className='flex justify-center m-5'>
+                            <button type="submit " className='bg-green-600  px-5 py-2  tracking-wider rounded-md hover:bg-green-700 text-white '>Confirm</button>
+                         </div>
                         </div>
     
                    

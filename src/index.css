@@ -7,10 +7,7 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 .hideMenuNav {
   display: none;
 }
@@ -35,3 +32,10 @@ th, td {
 tr:nth-of-type(even) {
   background-color:rgba(241, 242, 208, 0.748);
 }
+li.selected {
+  color: rgb(168, 100, 18);
+  text-decoration: underline;
+}
+.focused {
+  border-color: blue; 
+  }

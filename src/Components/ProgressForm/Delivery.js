@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useRef } from 'react';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -19,8 +20,15 @@ import Footer from '../Footer';
 
 
 export function Delivery  (props) {
-
+  const addressFormRef = useRef(null);
   const [basket,setBasket]=useState([]);
+  const handleRadioChange = (event) => {
+    // If the selected value is "Home Delivery"
+    if (event.target.value === "Home Delivery") {
+      // Focus the AddressForm component
+      addressFormRef.current.focus();
+    }
+  };
   
   return (
    <div>
@@ -31,6 +39,7 @@ export function Delivery  (props) {
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="Home Delivery"
         name="radio-buttons-group"
+        onChange={handleRadioChange}
       >
         <div className='flex m-4 ' >
           
@@ -53,7 +62,7 @@ export function Delivery  (props) {
         <div className='flex flex-col md:flex-row justify-around'>
           
       
-        <AddressForm />
+        <AddressForm ref={addressFormRef} className="focused"/>
         <CheckoutForm />
         </div>
         <Footer />

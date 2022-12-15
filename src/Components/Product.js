@@ -44,10 +44,10 @@ export default function Product (props){
             </div>
             <p className="md:font-medium leading-6 tracking-wider  rounded-y-xl  md:m-4 m-2">{props.product.Discription}</p>
            
-           <div className='flex justify-evenly'>
+           <div className="flex justify-between md:justify-evenly">
             
            <ProductCounter />
-            <span className="  md:m-4 m-2">
+            <span className=" md:m-4 ">
             <button onClick={buy} className="rounded-md p-2 font-sans transition ease-in-out 
             delay-150 bg-yellow-100   hover:bg-yellow-200  duration-300 t">
            <div className='flex '>
