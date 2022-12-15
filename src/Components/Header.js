@@ -18,8 +18,11 @@ function Header(props) {
         <Nav />
 <div className='flex '>
   
+<Link to="/" >
+    
 
     <img src="logo.svg" alt="logo" className='h-12 w-56  md:h-16'/>
+    </Link> 
     </div>
     <div className='flex '>
       
@@ -33,10 +36,10 @@ function Header(props) {
 
   
     </div>
-       <div className='md:m-5 '>
-        <Link to="/#newsletter">
+       <div className='md:m-5 m-5'>
+        <a href="/#newsletter">
        Newsletter 
-         </Link>
+         </a>
        </div>
        </div>
 

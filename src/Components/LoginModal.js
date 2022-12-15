@@ -5,6 +5,18 @@ import PersonIcon from '@mui/icons-material/Person';
 import SignupModal from './SignupModal';
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { useState, useEffect } from 'react';
 
@@ -46,9 +58,10 @@ function LoginModal() {
                             </div>
       */}
       <PhoneInput 
+      
         international
   defaultCountry="DK"
-  required
+required
   value={value}
   onChange={setValue} className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
 
@@ -59,14 +72,14 @@ function LoginModal() {
                                     <a href="#" class="text-sm  focus:text-blue-500 hover:text-blue-500 hover:underline">Forgot password?</a>
                                 </div>
 
-                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white
+                                <input required type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white
                                  border border-gray-200 rounded-md   
                                   focus:border-blue-400 dark:focus:border-blue-400 
                                   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
 
                             <div class="mt-6">
-                                <button
+                                <button type='sumbit'
                                     class="w-full px-4 py-2 text-slate-600 tracking-wide  transition-colors duration-200 transform bg-yellow-100 rounded-md hover:bg-yellow-200 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                     Sign in
                                 </button>
@@ -81,11 +94,16 @@ function LoginModal() {
 
                         </form>
 
-<SignupModal   />         
+
+{/* <SignupModal   />          */}
        </div>
                 </div>
             </div>
   </div>
+
+
+
+  
   <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
 </>
 ) : null}

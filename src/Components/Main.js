@@ -29,7 +29,7 @@ function Main() {
   <Header />
 
 
-   <main>
+   <main class="scroll-smooth">
     <div className='grid  md:grid-cols-2 md:justify-evenly justify-items-center md:p-8 shadow'>
       
     <div className='flex flex-col justify-center gap-12 md:m-5  p-5' data-aos="fade-right"
@@ -68,29 +68,29 @@ dose of health
 
     </div>
     <div>
-      <div className='md:m-[5em]'>
+      <div className='m-5 md:m-[5em]'>
         
      
-      <h2 className='text-center md:text-3xl text-green-800  '>Gallary</h2>
+      <h2 className='text-center text-xl md:text-3xl text-slate-700  '>Gallary</h2>
       </div>
-    <div className='flex gap-3 md:ml-[5em] md:mr-[5em] md:mb-[5em] md:mt-[3em]'>
+    <div className='grid grid-cols-2 md:flex  gap-3 md:ml-[5em] md:mr-[5em] md:mb-[5em] md:mt-[3em]'>
 
-      <div className=' '>
-        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-20 md:h-fit object-cover' />
+      <div className='justify-self-end '>
+        <img src="https://www.anugraph.com/files/fitnesso-project/coffee.png" alt="coffee image" className='md:w-96 w-40 h-22 md:h-fit object-cover' />
       </div>
       <div >
-      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40  h-20 md:h-fit object-cover'/>
+      <img src="https://www.anugraph.com/files/fitnesso-project/driks.png" alt="juice" className='md:w-96 w-40  h-22 md:h-fit object-cover'/>
       </div>
-      <div className=' '>
-      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40  h-20 md:h-fit object-cover'/>
+      <div className='justify-self-end  '>
+      <img src="https://www.anugraph.com/files/fitnesso-project/salat.jpeg" alt="salat bowl" className='md:w-96 w-40  h-22 md:h-fit object-cover'/>
       </div>
       <div>
-      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='md:w-96 w-40 h-20 md:h-fit object-cover' />
+      <img src="https://www.anugraph.com/files/fitnesso-project/Peanutbutter-500g-1000x1000-01.png" alt="peanutbutter" className='md:w-96 w-40 h-22 md:h-fit object-cover' />
       </div>
     </div>
     
     </div>
-    <div className='flex md:p-12 p-12 justify-center md:gap-12  gap-8 flex-col md:flex-row bg-[#FDFDEA]'  
+    <div className='flex md:p-12 p-8 justify-center md:gap-12  gap-8 flex-col md:flex-row bg-[#FDFDEA]'  
   
   >
     <img src="shopimg2.jpg" alt="shop" className='md:w-2/6 w-4/6 '/>

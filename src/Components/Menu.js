@@ -79,12 +79,16 @@ const options = {
   <a href="/Menu?Catagory=Power Shake">Power Shake</a> 
 
   </li>
-  <li className={Catagory === "Power Shots" ? "selected" : ""}>
+  <li className={Catagory === "Power Shot" ? "selected" : ""}>
   <a href="/Menu?Catagory=Power Shot">Power Shots</a> 
 
   </li>
   <li className={Catagory === "Chia Bowl" ? "selected" : ""}>
   <a href="/Menu?Catagory=Chia Bowl">Chia Bowl</a> 
+
+  </li>
+  <li className={Catagory === "Bodylab" ? "selected" : ""}>
+  <a href="/Menu?Catagory=Bodylab">Body lab</a> 
 
   </li>
     </ul>

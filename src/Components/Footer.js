@@ -21,8 +21,10 @@ function Footer() {
 </a>
         </div>
         <div className='flex gap-10 m-5'>
-        <FacebookIcon fontSize='large' sx={{ color: "#00008b" }} />
-        <InstagramIcon fontSize='large' sx={{ color: "#cb4154" }} />
+          <a href="">
+        <FacebookIcon fontSize='large' sx={{ color: "#00008b" }} /></a>
+        <a href="">
+        <InstagramIcon fontSize='large' sx={{ color: "#cb4154" }} /></a>
         </div>
         <div>
         </div>

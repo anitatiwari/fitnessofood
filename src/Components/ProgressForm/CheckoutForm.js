@@ -23,33 +23,44 @@ class CheckoutForm extends React.Component {
           alert('All fields are required');
           return;
     }
+    <Link to="/success">
+ <button className="pay-now-button" onClick={this.handleSubmit}>Pay Now</button>
+</Link>
+    this.setState({
+        redirectToSuccess: true
+      });
 }
     render() {
+        if (this.state.redirectToSuccess) {
+            return <Success />;
+          }
       return (
-        <div className='shadow-md mb-4 tracking-wider'>
-           <div className='flex justify-center'>
+        <div className='max-w-xl md:max-w-3xl md:shadow-md md:mb-4 m-12 md:m-0 tracking-wider'>
+           <div className='flex justify-center '>
           <img src="card-blue.svg" alt="card icon" className='md:w-4/6 w-2/6 ' />
            </div>
-           <form className='W-full '>
-            <div class="flex  flex-col gap-2 md:m-5  ">
+           <form className='W-full m-2 '>
+            <div class="flex  flex-col md:gap-2 gap-5 md:m-5  ">
                 <label for="owner" className='w-32  text-gray-500'>Owner</label>
                 <input required type="text" class=" border border-5 bg-gray-100  p-2" id="owner" />
             </div>
-            <div class=" flex flex-col gap-2 md:m-5" id="card-number-field ">
+            <div class=" flex flex-col  md:gap-2 gap-5 md:m-5" id="card-number-field ">
                 <label for="cardNumber" className='w-30 text-gray-500'>Card Number</label>
-                <input      value={this.state.cardNumber}
-            onChange={this.handleChange} type="text" class="border bg-gray-100 p-2" id="cardNumber" />
+                <input  required   
+           type="number" class="border bg-gray-100 p-2" id="cardNumber" />
             </div>
-            <div className='flex'>
+            <div className='flex gap-5 mt-5'>
               
-           
-            <div class="flex md:flex-col  gap-2 md:m-5">
+   
+            
+         
+            <div class="flex md:flex-col   md:gap-2 gap-5  md:m-5">
                 <label for=" flex   " className='text-gray-500 '>CVV</label>
-                <input     value={this.state.cvv}
-            onChange={this.handleChange} type="text" class="border bg-gray-100 w-32 p-2" id="cvv" />
+                <input  required   
+             type="number" class="border bg-gray-100 w-32 h-12 p-2" id="cvv" />
             </div>
           
-            <div class="flex justify-between flex  gap-2 md:m-5 " id="expiration-date">
+            <div class="flex justify-between flex-wrap md:flex-row md:gap-2 gap-5 ml-4 md:m-5" id="expiration-date">
                 <label className=' text-gray-500'>Expiration Date</label>
                 <select className='w-20 h-12 border'>
                     <option value="01">January</option>
@@ -74,11 +85,13 @@ class CheckoutForm extends React.Component {
                     <option value="21"> 2021</option>
                 </select>
             </div>
+          
             </div>
          
             <div class="flex justify-center" id="pay-now">
+             
                 <Link to="/Success" >
-                <input type="submit" class="bg-blue-700 hover:bg-blue-500 m-2 text-white p-2 rounded w-32" id="confirm-purchase" value="pay"/>
+                <input type="submit" class="bg-blue-700 hover:bg-blue-500  text-white p-2 rounded w-32" id="confirm-purchase" value="pay"/>
                 </Link>
             </div>
         </form>

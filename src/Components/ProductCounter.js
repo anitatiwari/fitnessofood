@@ -19,11 +19,11 @@ setCounter(newCounter);
     }
 
   return (
-    <div className='flex gap-2 md:m-4   '>
-  <div>
+    <div className='flex w-16 gap-3 md:m-4   '>
+  <div className=' '>
     
 
-  <button onClick={decrementCounter}  className="bg-yellow-100 w-10 text-xl " >
+  <button onClick={decrementCounter}  className="border border-yellow-400 rounded bg-yellow-100 w-10 text-xl " >
       -
     </button>
    
@@ -35,7 +35,7 @@ setCounter(newCounter);
     </div>
     <div>
         
-   <button onClick={incrementCounter} className="bg-yellow-100 w-10 text-xl ">
+   <button onClick={incrementCounter} className="border border-yellow-400 rounded  bg-yellow-100 w-10 text-xl ">
       +
     </button>
   
